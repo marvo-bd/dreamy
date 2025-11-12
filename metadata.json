@@ -1,0 +1,5 @@
+{
+  "name": "Dreamy",
+  "description": "A dream interpretation application that uses AI to analyze and explain the symbolic meanings behind your dreams, providing a seamless and dreamlike user experience.",
+  "requestFramePermissions": ["microphone"]
+}

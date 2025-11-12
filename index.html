@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dreamy - AI Dream Interpretation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
+        100% { transform: translateY(0px); }
+      }
+      .orb-float {
+        animation: float 6s ease-in-out infinite;
+      }
+      @keyframes slow-spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      .slow-spin-1 { animation: slow-spin 50s linear infinite; }
+      .slow-spin-2 { animation: slow-spin 70s linear infinite reverse; }
+
+      @keyframes twinkle {
+        0%, 100% { opacity: 0.2; transform: scale(0.9); }
+        50% { opacity: 1; transform: scale(1.05); }
+      }
+      .animate-twinkle {
+        animation: twinkle 6s ease-in-out infinite alternate;
+      }
+      
+      /* New Transition Animations */
+      @keyframes glowing-ribbon {
+        0% { transform: translateX(-100%) skewX(-20deg); opacity: 0.3; }
+        50% { opacity: 0.8; }
+        100% { transform: translateX(100%) skewX(20deg); opacity: 0.3; }
+      }
+      @keyframes move-across {
+        from { transform: translate(-20vw, -20vh); }
+        to { transform: translate(120vw, 20vh); }
+      }
+      @keyframes text-fade-in-out {
+        0%, 100% { opacity: 0; transform: translateY(10px); }
+        20%, 80% { opacity: 1; transform: translateY(0); }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
